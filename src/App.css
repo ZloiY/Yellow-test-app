@@ -1,0 +1,87 @@
+header {
+  flex: 0 1 auto;
+  background-color: #7ed321;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .link {
+    display: none;
+  }
+  
+  .navigation-layout {
+    flex-basis: 8rem !important;
+  }
+
+  .navigation-btn {
+    display: block !important;
+    width: 4rem;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    object-fit: contain;
+  }
+
+  .navigation-btn img {
+    width: 3rem;
+    height: 2.5rem;
+  }
+
+  .filter-btn {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 4rem;
+  }
+
+  .filter-btn img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.navigation-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 1 20rem;
+}
+
+.navigation-btn {
+  display: none;
+}
+
+.link {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.active-link {
+  border-bottom: solid 2px white;
+}
+
+.filter-btn {
+  size: 2.4rem;
+  object-fit: cover;
+  border: none;
+  background-color: transparent;
+}
+
+.contact-us-layout {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}

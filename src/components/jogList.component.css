@@ -1,0 +1,113 @@
+.jog-list-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.jog-filter {
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+
+.filter-label {
+  color: #979797;
+  font-size: 0.8rem;
+  margin: 0 1rem;
+}
+
+.filter-input {
+  height: 1.9rem;
+  min-width: 8.5rem;
+  border-radius: 0.6rem;
+  border: solid 1px #979797;
+  background-color: #ffffff;
+}
+
+.jog-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 30rem;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.add-jog {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+}
+
+.add-btn {
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.add-btn-img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: -6px;
+}
+
+.first-jog-layout {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-jog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-jog-btn {
+  margin-top: 5rem;
+  font-size: 1.1rem;
+  width: 13rem;
+  height: 3rem;
+  background-color: transparent;
+  color: #e990f9;
+  border-radius: 36px;
+  border: solid 2px #e990f9;
+}
+
+@media only screen and (max-width: 768px) {
+  .add-btn, .add-btn-img {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .first-jog-container {
+    height: 40rem;
+  }
+
+  .first-jog-container img {
+    margin-top: 5rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .first-jog-container span {
+    font-size: 1.5rem;
+  }
+
+  .first-jog-btn {
+    margin-top: auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-width: 4px;
+    border-radius: 44px;
+    height: 5rem;
+    width: 23rem;
+  }
+}

@@ -1,0 +1,15 @@
+.nothing-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nothing-img {
+  size: 9.5rem;
+  margin-bottom: 6rem;
+}
+
+.nothing-text {
+  font-size: 1.3rem;
+  color: #979797;
+}

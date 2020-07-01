@@ -1,0 +1,55 @@
+.jog-item-layout {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+}
+
+.jog-img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-right: 3rem;
+}
+
+.jog-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.jog-date {
+  font-weight: normal;
+  color: darkgray;
+}
+
+.jog-prop {
+  display: inline;
+  margin: 0.3rem 0;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.value {
+  font-weight: normal;
+  color: darkgray;
+}
+
+@media only screen and (max-width: 768px) {
+  .jog-item-layout {
+    width: 100%;
+    justify-content: center;
+    border-bottom: solid 1px #979797;
+  }
+
+  .jog-img {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 6rem;
+  }
+
+  .jog-info {
+    font-size: 1.5rem;
+  }
+}

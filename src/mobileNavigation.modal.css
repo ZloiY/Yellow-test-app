@@ -1,0 +1,48 @@
+.mobile-modal-layout {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.mobile-modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.6rem;
+}
+
+.modal-logo {
+  color: #7ed321;
+  width: 10rem;
+  height: 3.5rem;
+}
+
+.mobile-cancel-btn {
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+}
+
+.mobile-routes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.mobile-link {
+  margin-top: 3rem;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.active-mobile-link {
+  color: #7ed321;
+}

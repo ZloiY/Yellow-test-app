@@ -1,0 +1,24 @@
+.info-layout {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.info-container {
+  flex: 0 1 40rem;
+}
+
+.info-header {
+  font-size: 2rem;
+  color: #7ed321;
+  font-weight: bold;
+}
+
+.info-paragraph {
+  margin: 2rem 0 4rem 0;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
