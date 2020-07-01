@@ -53,8 +53,8 @@ const CreateJogComponent = ({ createJog }) => (
 export const JogList = ({ filter }) => {
 
   const [ jogs, setJogs ] = React.useState(null);
-  const [ dateFrom, setDateFrom ] = React.useState(null);
-  const [ dateTo, setDateTo ] = React.useState(null);
+  const [ dateFrom, setDateFrom ] = React.useState('');
+  const [ dateTo, setDateTo ] = React.useState('');
   const [ show, setShow ] = React.useState(false);
   const [ currentJog, setCurrentJog ] = React.useState(null);
 
@@ -70,6 +70,16 @@ export const JogList = ({ filter }) => {
     setShow(true);
   }
 
+  const onSettingDateTo = (date) => {
+    setDateTo(date);
+    if (date < dateFrom && dateFrom != '') setDateFrom(date);
+  }
+
+  const onSettingDateFrom = (date) => {
+    setDateFrom(date);
+    if (date > dateTo && dateTo != '') setDateTo(date);
+  }
+
   const addNewJog = (jog) => addJog(localStorage.getItem(TOKEN_LOCATION), jog)
     .then((jog) => setJogs([ jog, ...jogs ]))
     .then(() => setShow(false));
@@ -82,9 +92,9 @@ export const JogList = ({ filter }) => {
     <JogItem onEdit={() => editJog(jog)} key={jog.id} {...jog}/>
   );
 
-  const filterFromJog = (jog) => (dateFrom && new Date(dateFrom).getTime() <= jog.date) || dateFrom == null;
+  const filterFromJog = (jog) => (dateFrom && new Date(dateFrom).getTime() <= jog.date) || dateFrom == '';
 
-  const filterToJog = (jog) => (dateTo && new Date(dateTo).getTime() >= jog.date) || dateTo == null;
+  const filterToJog = (jog) => (dateTo && new Date(dateTo).getTime() >= jog.date) || dateTo == '';
 
   const filterJog = (jog) => filter ? filterFromJog(jog) && filterToJog(jog)  : true;
 
@@ -97,13 +107,13 @@ export const JogList = ({ filter }) => {
             <label className='filter-label' htmlFor='date-from'>Date from</label>
             <input className='filter-input' id='date-from' type='date'
               value={dateFrom}
-              onChange={(event) => setDateFrom(event.target.value)}/>
+              onChange={(event) => onSettingDateFrom(event.target.value)}/>
           </div>
           <div className='filter-field'>
             <label className='filter-label' htmlFor='date-to'>Date to</label>
             <input className='filter-input' id='date-to' type='date'
               value={dateTo}
-              onChange={(event) => setDateTo(event.target.value)}/>
+              onChange={(event) => onSettingDateTo(event.target.value)}/>
           </div>
         </div> : null}
         <div className='jog-list'>

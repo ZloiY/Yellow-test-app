@@ -1,5 +1,7 @@
 .modal-layout {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -12,7 +14,6 @@
   flex-direction: column;
   background-color: #7ed321;
   border-radius: 36px;
-  margin: 20% auto;
   width: 32rem;
 }
 
@@ -72,12 +73,6 @@
 
   .field-label {
     font-size: 1.3rem;
-  }
-
-  .modal-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .form-submit {

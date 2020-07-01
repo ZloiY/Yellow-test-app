@@ -10,6 +10,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-window.addEventListener('unload', (event) => {
-  localStorage.clear()
+window.addEventListener('load', () => {
+  if (!sessionStorage.getItem('isActive'))
+      localStorage.clear();
+
+  sessionStorage.setItem('isActive', true);
 })

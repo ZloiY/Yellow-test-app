@@ -4,8 +4,8 @@ import cancelIcon from './assets/cancel.svg';
 
 export const dateParser = (date) => {
   date = new Date(date);
-  const month = date.getMonth() + 1 <= 9 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
-  return `${date.getFullYear()}-${month}-${date.getDate()}`;
+  const fitDateFormat = (date) => date <= 9 ? `0${date}` : `${date}`
+  return `${date.getFullYear()}-${fitDateFormat(date.getMonth() + 1)}-${fitDateFormat(date.getDate())}`;
 }
 
 const SET_DISTANCE = 'SET_DISTANCE';
@@ -25,6 +25,8 @@ const jogReducer = (jog, [ action, value ]) => {
       return value;
   }
 }
+
+const log = (val) => { console.log(val); return val}
 
 const initJog = () => ({ distance: 0, time: 0, date: new Date() });
 
